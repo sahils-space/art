@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Resin Atelier | Handcrafted Botanical & Geode Resin Art Kashmir</title>
+  <meta name="description" content="Shop luxury handcrafted botanical resin bookmarks, custom initial keychains, 3D ocean wave clocks, agate coasters, and wedding flower preservation in Kashmir.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Google Fonts: Cormorant Garamond (Luxury Serif) & Plus Jakarta Sans (Modern UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- Custom Boutique Stylesheet -->
+  <link rel="stylesheet" href="art.css?v=8.0">
+</head>
+<body>
+
+  <!-- 1. TOP ANNOUNCEMENT BAR (SHOPIFY PRESTIGE STYLE) -->
+  <aside class="announcement-bar">
+    <div class="announcement-bar-content">
+      <span class="announcement-tag"><i class="fa-solid fa-sparkles"></i> Pure Artisanship</span>
+      <span>Handcrafted with Kashmiri Botanicals &amp; Crystal Resin • Free Delivery Across J&amp;K on Orders Over ₹999 • Bespoke Nikah &amp; Wedding Flower Preservation Open</span>
+    </div>
+  </aside>
+
+  <!-- 2. STICKY LUXURY BOUTIQUE HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Mobile Menu Toggle -->
+      <button type="button" class="mobile-menu-toggle" aria-label="Toggle navigation" onclick="document.getElementById('navMenu').classList.toggle('active')">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+
+      <!-- Nav Links -->
+      <nav class="site-nav" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#collections" class="nav-link active">Collections</a></li>
+          <li><a href="#simulator" class="nav-link">3D Customizer</a></li>
+          <li><a href="#our-craft" class="nav-link">Our Craft</a></li>
+          <li><a href="#bespoke" class="nav-link">Bespoke Orders</a></li>
+        </ul>
+      </nav>
+
+      <!-- Brand Logo -->
+      <div class="brand-logo-wrap">
+        <a href="/" class="brand-logo">
+          <span>AURA</span>
+          <span class="brand-logo-sub">Resin Atelier • Kashmir</span>
+        </a>
+      </div>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button type="button" class="header-action-btn" title="View Wishlist" onclick="alert('Your Wishlist contains ' + (window.auraAtelier ? 'saved pieces' : '0 items') + '. Browse collections below to save favorites!')">
+          <i class="fa-regular fa-heart"></i>
+          <span class="header-badge-count" id="wishlistCountBadge">0</span>
+        </button>
+
+        <button type="button" class="header-action-btn" title="Shopping Bag" onclick="window.auraAtelier.toggleCartDrawer(true)">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="header-badge-count" id="cartCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. EDITORIAL HERO SHOWCASE SECTION -->
+  <section class="hero-editorial">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="hero-subheading">
+          <i class="fa-solid fa-gem"></i> Hand-Poured in the Valley of Kashmir
+        </span>
+        <h1 class="hero-title">
+          Where Liquid Crystal Meets <em>Kashmiri Blooms</em>
+        </h1>
+        <p class="hero-lead">
+          Preserving fresh Chinar leaves, wild alpine roses, and 24K gold foil in optical-grade, shatterproof crystal resin. Functional home artifacts and heartfelt keepsakes made by hand.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#collections" class="btn-luxury-primary">
+            <span>Explore Collections</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#simulator" class="btn-luxury-outline">
+            <i class="fa-solid fa-cube"></i> Try 3D Simulator
+          </a>
+        </div>
+
+        <div class="hero-trust-badges">
+          <div class="trust-badge-item">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>48-Hour Slow Cure</span>
+          </div>
+          <div class="trust-badge-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Zero-Yellow UV Shield</span>
+          </div>
+          <div class="trust-badge-item">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>24K Gold Leaf Details</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Interactive Hero Card -->
+      <div class="hero-visual-wrap">
+        <div class="hero-3d-card" id="hero3dCard">
+          <img src="images/resin/resin-quran-stand.jpg?v=5.0" alt="Handcrafted Islamic Resin Quran Stand (Rehal)" loading="eager">
+          <div class="hero-floating-tag">
+            <div class="hero-floating-info">
+              <h4>Royal Folding Quran Stand (Rehal)</h4>
+              <p>24K Gold Leaf &amp; Emerald Resin</p>
+            </div>
+            <div class="hero-floating-price">₹1,599</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 3D INTERACTIVE CUSTOM RESIN SIMULATOR -->
+  <section class="resin-simulator-section" id="simulator">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">Interactive Studio</span>
+        <h2 class="section-title">Design Your Custom Resin Initial</h2>
+        <p class="section-desc">
+          Test color tones, floating metallic leaf, and your initial in our real-time 3D simulator before placing your order.
+        </p>
+      </div>
+
+      <div class="simulator-box">
+        <!-- Interactive 3D Canvas -->
+        <div class="sim-preview-stage">
+          <div class="sim-resin-canvas" id="simResinCanvas" style="background: radial-gradient(circle at 30% 30%, #1e3a8a, #0f172a);">
+            <div class="sim-foil-layer" style="background-image: radial-gradient(#dfba7f 10%, transparent 20%);"></div>
+            <span class="sim-initial-display" id="simInitialDisplay">S</span>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="sim-controls-panel">
+          <h3>Personalize Every Detail</h3>
+          <p>Handmade to order with authentic floral botanicals and your choice of metallic foil.</p>
+
+          <div class="control-group">
+            <label class="control-label">1. Choose Resin Hue</label>
+            <div class="swatch-row">
+              <button type="button" class="swatch-btn color-swatch active" data-bg="radial-gradient(circle at 30% 30%, #1e3a8a, #0f172a)" style="background: #1e3a8a;" title="Ocean Deep Blue"></button>
+              <button type="button" class="swatch-btn color-swatch" data-bg="radial-gradient(circle at 30% 30%, #064e3b, #022c22)" style="background: #064e3b;" title="Emerald Valley"></button>
+              <button type="button" class="swatch-btn color-swatch" data-bg="radial-gradient(circle at 30% 30%, #be185d, #831843)" style="background: #be185d;" title="Rose Petal Pink"></button>
+              <button type="button" class="swatch-btn color-swatch" data-bg="radial-gradient(circle at 30% 30%, #18181b, #09090b)" style="background: #18181b;" title="Midnight Obsidian"></button>
+              <button type="button" class="swatch-btn color-swatch" data-bg="radial-gradient(circle at 30% 30%, #fef3c7, #fde68a)" style="background: #fef3c7;" title="Champagne Cream"></button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="simTextInput">2. Enter Letter / Initial</label>
+            <input type="text" id="simTextInput" class="sim-text-input" value="S" maxlength="2" placeholder="Letter">
+          </div>
+
+          <button type="button" class="btn-luxury-primary sim-order-btn" onclick="window.auraAtelier.orderSimulatorCustomPiece()">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Order This Custom Piece on WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SHOPPING COLLECTIONS & PRODUCT CATALOG -->
+  <section class="collections-section" id="collections">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">Signature Creations</span>
+        <h2 class="section-title">The Atelier Collection</h2>
+        <p class="section-desc">Each piece is individually cast, slowly cured for 48 hours, and hand-finished with diamond buffing.</p>
+      </div>
+
+      <!-- Filter Pills -->
+      <div class="category-filter-bar">
+        <button type="button" class="filter-pill active" data-filter="all">All Pieces</button>
+        <button type="button" class="filter-pill" data-filter="islamic">Quran Stands &amp; Islamic Art</button>
+        <button type="button" class="filter-pill" data-filter="bookmarks">Botanical Bookmarks</button>
+        <button type="button" class="filter-pill" data-filter="keychains">Custom Keychains</button>
+        <button type="button" class="filter-pill" data-filter="clocks">Ocean &amp; Geode Clocks</button>
+        <button type="button" class="filter-pill" data-filter="coasters">Coasters &amp; Trays</button>
+        <button type="button" class="filter-pill" data-filter="wedding">Wedding Keepsakes</button>
+      </div>
+
+      <!-- Dynamic Products Grid (Pre-rendered for Instant Display & Enhanced by art.js) -->
+      <div class="product-grid" id="productsGrid">
+        
+        <!-- Product 1: Bookmark -->
+        <article class="product-card" data-id="prod-1" data-category="bookmarks">
+          <span class="product-card-badge">Bestseller</span>
+          <button type="button" class="product-card-wishlist" onclick="window.auraAtelier ? window.auraAtelier.toggleWishlist('prod-1') : null" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="product-media" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-1') : null" style="cursor: pointer;">
+            <img src="images/resin/resin-bookmark.jpg?v=5.0" alt="Bismillah Calligraphy &amp; 24K Gold Leaf Resin Bookmark" loading="lazy">
+            <button type="button" class="product-quick-view-btn"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-meta">Botanical &amp; Sacred Bookmarks</span>
+            <h3 class="product-title" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-1') : null">Bismillah Calligraphy &amp; 24K Gold Leaf Resin Bookmark</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="product-rating-count">(42)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">₹349</span>
+              <span class="product-mrp">₹599</span>
+              <span class="product-save-pill">Save ₹250</span>
+            </div>
+            <div class="product-card-actions">
+              <button type="button" class="btn-card-add" onclick="window.auraAtelier ? window.auraAtelier.addToCart('prod-1') : null">
+                <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+              </button>
+              <button type="button" class="btn-card-wa" onclick="window.auraAtelier ? window.auraAtelier.orderViaWhatsApp('prod-1') : null" title="Quick WhatsApp Order">
+                <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2: Keychain -->
+        <article class="product-card" data-id="prod-2" data-category="keychains">
+          <span class="product-card-badge">Personalized</span>
+          <button type="button" class="product-card-wishlist" onclick="window.auraAtelier ? window.auraAtelier.toggleWishlist('prod-2') : null" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="product-media" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-2') : null" style="cursor: pointer;">
+            <img src="images/resin/resin-keychain.jpg?v=5.0" alt="Black &amp; Gold Luxe Word / Initial Resin Keychain" loading="lazy">
+            <button type="button" class="product-quick-view-btn"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-meta">Custom Keychains</span>
+            <h3 class="product-title" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-2') : null">Black &amp; Gold Luxe Word / Initial Resin Keychain</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="product-rating-count">(68)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">₹249</span>
+              <span class="product-mrp">₹450</span>
+              <span class="product-save-pill">Save ₹201</span>
+            </div>
+            <div class="product-card-actions">
+              <button type="button" class="btn-card-add" onclick="window.auraAtelier ? window.auraAtelier.addToCart('prod-2') : null">
+                <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+              </button>
+              <button type="button" class="btn-card-wa" onclick="window.auraAtelier ? window.auraAtelier.orderViaWhatsApp('prod-2') : null" title="Quick WhatsApp Order">
+                <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3: Quran Stand -->
+        <article class="product-card" data-id="prod-3" data-category="islamic">
+          <span class="product-card-badge">Masterpiece</span>
+          <button type="button" class="product-card-wishlist" onclick="window.auraAtelier ? window.auraAtelier.toggleWishlist('prod-3') : null" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="product-media" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-3') : null" style="cursor: pointer;">
+            <img src="images/resin/resin-quran-stand.jpg?v=5.0" alt="Royal Pearl &amp; Magenta Floral Folding Quran Stand (Rehal)" loading="lazy">
+            <button type="button" class="product-quick-view-btn"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-meta">Sacred Rehal &amp; Quran Stands</span>
+            <h3 class="product-title" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-3') : null">Royal Pearl &amp; Magenta Floral Folding Quran Stand (Rehal)</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="product-rating-count">(56)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">₹1,599</span>
+              <span class="product-mrp">₹2,799</span>
+              <span class="product-save-pill">Save ₹1,200</span>
+            </div>
+            <div class="product-card-actions">
+              <button type="button" class="btn-card-add" onclick="window.auraAtelier ? window.auraAtelier.addToCart('prod-3') : null">
+                <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+              </button>
+              <button type="button" class="btn-card-wa" onclick="window.auraAtelier ? window.auraAtelier.orderViaWhatsApp('prod-3') : null" title="Quick WhatsApp Order">
+                <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4: Clock -->
+        <article class="product-card" data-id="prod-4" data-category="clocks">
+          <span class="product-card-badge">Signature</span>
+          <button type="button" class="product-card-wishlist" onclick="window.auraAtelier ? window.auraAtelier.toggleWishlist('prod-4') : null" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="product-media" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-4') : null" style="cursor: pointer;">
+            <img src="images/resin/resin-clock.jpg?v=5.0" alt="Dal Lake Ocean Wave 3D Geode Wall Clock (12-inch)" loading="lazy">
+            <button type="button" class="product-quick-view-btn"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-meta">Ocean &amp; Geode Clocks</span>
+            <h3 class="product-title" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-4') : null">Dal Lake Ocean Wave 3D Geode Wall Clock (12-inch)</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span class="product-rating-count">(22)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">₹1,899</span>
+              <span class="product-mrp">₹3,200</span>
+              <span class="product-save-pill">Save ₹1,301</span>
+            </div>
+            <div class="product-card-actions">
+              <button type="button" class="btn-card-add" onclick="window.auraAtelier ? window.auraAtelier.addToCart('prod-4') : null">
+                <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+              </button>
+              <button type="button" class="btn-card-wa" onclick="window.auraAtelier ? window.auraAtelier.orderViaWhatsApp('prod-4') : null" title="Quick WhatsApp Order">
+                <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 5: Coasters -->
+        <article class="product-card" data-id="prod-5" data-category="coasters">
+          <span class="product-card-badge">Hand-Gilded</span>
+          <button type="button" class="product-card-wishlist" onclick="window.auraAtelier ? window.auraAtelier.toggleWishlist('prod-5') : null" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="product-media" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-5') : null" style="cursor: pointer;">
+            <img src="images/resin/resin-coasters.jpg?v=5.0" alt="Royal Emerald Agate Resin Coasters (Set of 4)" loading="lazy">
+            <button type="button" class="product-quick-view-btn"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-meta">Luxury Coasters</span>
+            <h3 class="product-title" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-5') : null">Royal Emerald Agate Resin Coasters (Set of 4)</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span class="product-rating-count">(41)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">₹699</span>
+              <span class="product-mrp">₹1,199</span>
+              <span class="product-save-pill">Save ₹500</span>
+            </div>
+            <div class="product-card-actions">
+              <button type="button" class="btn-card-add" onclick="window.auraAtelier ? window.auraAtelier.addToCart('prod-5') : null">
+                <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+              </button>
+              <button type="button" class="btn-card-wa" onclick="window.auraAtelier ? window.auraAtelier.orderViaWhatsApp('prod-5') : null" title="Quick WhatsApp Order">
+                <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 6: Ayat-ul-Kursi Frame -->
+        <article class="product-card" data-id="prod-6" data-category="islamic">
+          <span class="product-card-badge">Spiritual Decor</span>
+          <button type="button" class="product-card-wishlist" onclick="window.auraAtelier ? window.auraAtelier.toggleWishlist('prod-6') : null" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="product-media" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-6') : null" style="cursor: pointer;">
+            <img src="images/resin/resin-ayat-frame.jpg?v=5.0" alt="Ayat-ul-Kursi Mirror Gold Calligraphy Resin Frame" loading="lazy">
+            <button type="button" class="product-quick-view-btn"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-meta">Islamic Sacred Art</span>
+            <h3 class="product-title" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-6') : null">Ayat-ul-Kursi Mirror Gold Calligraphy Resin Frame</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="product-rating-count">(53)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">₹1,299</span>
+              <span class="product-mrp">₹2,199</span>
+              <span class="product-save-pill">Save ₹900</span>
+            </div>
+            <div class="product-card-actions">
+              <button type="button" class="btn-card-add" onclick="window.auraAtelier ? window.auraAtelier.addToCart('prod-6') : null">
+                <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+              </button>
+              <button type="button" class="btn-card-wa" onclick="window.auraAtelier ? window.auraAtelier.orderViaWhatsApp('prod-6') : null" title="Quick WhatsApp Order">
+                <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 7: Wedding Cube -->
+        <article class="product-card" data-id="prod-7" data-category="wedding">
+          <span class="product-card-badge">Bespoke Order</span>
+          <button type="button" class="product-card-wishlist" onclick="window.auraAtelier ? window.auraAtelier.toggleWishlist('prod-7') : null" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="product-media" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-7') : null" style="cursor: pointer;">
+            <img src="images/resin/resin-wedding-cube.jpg?v=5.0" alt="Nikah &amp; Wedding Flower Keepsake Crystal Cube" loading="lazy">
+            <button type="button" class="product-quick-view-btn"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-meta">Wedding Keepsakes</span>
+            <h3 class="product-title" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-7') : null">Nikah &amp; Wedding Flower Keepsake Crystal Cube</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="product-rating-count">(19)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">₹2,499</span>
+              <span class="product-mrp">₹4,000</span>
+              <span class="product-save-pill">Save ₹1,501</span>
+            </div>
+            <div class="product-card-actions">
+              <button type="button" class="btn-card-add" onclick="window.auraAtelier ? window.auraAtelier.addToCart('prod-7') : null">
+                <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+              </button>
+              <button type="button" class="btn-card-wa" onclick="window.auraAtelier ? window.auraAtelier.orderViaWhatsApp('prod-7') : null" title="Quick WhatsApp Order">
+                <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 8: Tray -->
+        <article class="product-card" data-id="prod-8" data-category="coasters">
+          <span class="product-card-badge">Artisan Crafted</span>
+          <button type="button" class="product-card-wishlist" onclick="window.auraAtelier ? window.auraAtelier.toggleWishlist('prod-8') : null" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="product-media" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-8') : null" style="cursor: pointer;">
+            <img src="images/resin/resin-tray.jpg?v=5.0" alt="Golden Ginkgo Leaf Vanity &amp; Jewelry Trinket Tray" loading="lazy">
+            <button type="button" class="product-quick-view-btn"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-meta">Vanity Trays</span>
+            <h3 class="product-title" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-8') : null">Golden Ginkgo Leaf Vanity &amp; Jewelry Trinket Tray</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span class="product-rating-count">(30)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">₹549</span>
+              <span class="product-mrp">₹899</span>
+              <span class="product-save-pill">Save ₹350</span>
+            </div>
+            <div class="product-card-actions">
+              <button type="button" class="btn-card-add" onclick="window.auraAtelier ? window.auraAtelier.addToCart('prod-8') : null">
+                <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+              </button>
+              <button type="button" class="btn-card-wa" onclick="window.auraAtelier ? window.auraAtelier.orderViaWhatsApp('prod-8') : null" title="Quick WhatsApp Order">
+                <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 9: Pen Stand -->
+        <article class="product-card" data-id="prod-9" data-category="bookmarks">
+          <span class="product-card-badge">Study Aesthetic</span>
+          <button type="button" class="product-card-wishlist" onclick="window.auraAtelier ? window.auraAtelier.toggleWishlist('prod-9') : null" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="product-media" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-9') : null" style="cursor: pointer;">
+            <img src="images/resin/resin-pen-stand.jpg?v=5.0" alt="Botanical Crystal Resin Pen Stand &amp; Brush Holder" loading="lazy">
+            <button type="button" class="product-quick-view-btn"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-meta">Desk Artifacts</span>
+            <h3 class="product-title" onclick="window.auraAtelier ? window.auraAtelier.openQuickView('prod-9') : null">Botanical Crystal Resin Pen Stand &amp; Brush Holder</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span class="product-rating-count">(34)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">₹499</span>
+              <span class="product-mrp">₹799</span>
+              <span class="product-save-pill">Save ₹300</span>
+            </div>
+            <div class="product-card-actions">
+              <button type="button" class="btn-card-add" onclick="window.auraAtelier ? window.auraAtelier.addToCart('prod-9') : null">
+                <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+              </button>
+              <button type="button" class="btn-card-wa" onclick="window.auraAtelier ? window.auraAtelier.orderViaWhatsApp('prod-9') : null" title="Quick WhatsApp Order">
+                <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. THE ARTISANAL STORY (HOW IT'S CRAFTED) -->
+  <section class="craft-story-section" id="our-craft">
+    <div class="container">
+      <div class="section-head" style="color: white;">
+        <span class="section-eyebrow" style="color: var(--accent-gold-light);">Slow Handcraft</span>
+        <h2 class="section-title" style="color: white;">The 4-Step Resin Alchemy</h2>
+        <p class="section-desc" style="color: #b0a79d;">Why hand-poured epoxy resin requires patience, chemistry, and artistic precision.</p>
+      </div>
+
+      <div class="craft-story-grid">
+        <div class="craft-step-card">
+          <span class="step-num">01</span>
+          <h3 class="step-title">Botanical Curation</h3>
+          <p class="step-desc">Real Kashmiri Chinar leaves and garden roses are harvested, pressed in wooden presses, and moisture-extracted for 3 weeks to prevent discoloration.</p>
+        </div>
+
+        <div class="craft-step-card">
+          <span class="step-num">02</span>
+          <h3 class="step-title">Vacuum Casting</h3>
+          <p class="step-desc">Optical-grade, non-toxic epoxy resin is hand-mixed with metallic micas and degassed to eliminate micro-bubbles before pouring into molds.</p>
+        </div>
+
+        <div class="craft-step-card">
+          <span class="step-num">03</span>
+          <h3 class="step-title">48-Hour Slow Cure</h3>
+          <p class="step-desc">Unlike commercial plastic, true artisan resin cures slowly in a dust-free chamber, creating a glass-like weight and superior heat tolerance.</p>
+        </div>
+
+        <div class="craft-step-card">
+          <span class="step-num">04</span>
+          <h3 class="step-title">Diamond Polish</h3>
+          <p class="step-desc">Every piece is sanded up to 3000-grit, hand-beveled with gold leaf, and packed in eco-luxe gift wrapping with a custom wax seal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. BESPOKE CUSTOM ORDERS (WEDDING FLOWERS, MEMORIALS) -->
+  <section class="bespoke-section" id="bespoke">
+    <div class="container">
+      <div class="bespoke-card">
+        <div class="bespoke-info">
+          <span class="section-eyebrow">Bespoke Commissions</span>
+          <h3>Preserve Your Most Precious Moments</h3>
+          <p>
+            Whether preserving fresh roses from your wedding, casting a customized bridal keepsake, or designing a statement geode wall clock for your new home, our atelier works with you directly.
+          </p>
+
+          <ul class="bespoke-perks">
+            <li><i class="fa-solid fa-circle-check"></i> <span>Direct consultations via WhatsApp with the artist</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Free flower drying &amp; preservation guidance</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Personalized calligraphy &amp; date engravings</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Hand-delivered safely across Kashmir &amp; India</span></li>
+          </ul>
+        </div>
+
+        <form class="bespoke-form" onsubmit="window.auraAtelier.handleBespokeInquiry(event)">
+          <div class="form-field">
+            <label for="bespokeName">Your Name</label>
+            <input type="text" id="bespokeName" placeholder="e.g. Insha Mir" required>
+          </div>
+
+          <div class="form-field">
+            <label for="bespokeType">Project Type</label>
+            <select id="bespokeType">
+              <option value="Wedding / Nikah Flower Preservation">Wedding / Nikah Flower Preservation</option>
+              <option value="Custom Geode Wall Clock (12-18 inch)">Custom Geode Wall Clock (12-18 inch)</option>
+              <option value="Bulk Corporate / Event Favors">Bulk Corporate / Event Favors</option>
+              <option value="Ayat-ul-Kursi Custom Frame">Ayat-ul-Kursi Custom Frame</option>
+              <option value="Custom Initial Keychains / Bookmarks">Custom Initial Keychains / Bookmarks</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="bespokeDeadline">Required Date</label>
+            <input type="date" id="bespokeDeadline">
+          </div>
+
+          <div class="form-field">
+            <label for="bespokeDetails">Vision &amp; Details</label>
+            <textarea id="bespokeDetails" rows="3" placeholder="Describe the colors, size, or special items you want cast into resin..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-luxury-primary" style="justify-content: center; width: 100%;">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Send Bespoke Request to WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. SHOPIFY AJAX SLIDE-OUT CART DRAWER -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-drawer-header">
+        <h3 class="cart-drawer-title">Shopping Bag</h3>
+        <button type="button" class="cart-drawer-close" onclick="window.auraAtelier.toggleCartDrawer(false)" aria-label="Close cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Free Kashmir Delivery Progress Meter -->
+      <div class="shipping-meter-wrap">
+        <p class="shipping-meter-text" id="shippingMeterText">
+          Add <strong>₹999</strong> more for <strong>Free Kashmir Delivery</strong>
+        </p>
+        <div class="shipping-meter-bar">
+          <div class="shipping-meter-fill" id="shippingMeterFill"></div>
+        </div>
+      </div>
+
+      <div class="cart-drawer-items" id="cartDrawerItems">
+        <!-- Rendered dynamically by art.js -->
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-subtotal-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotalAmount">₹0</strong>
+        </div>
+
+        <div class="cart-checkout-actions">
+          <button type="button" class="btn-checkout-wa" onclick="window.auraAtelier.checkoutCartWhatsApp()">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Proceed to 1-Click WhatsApp Checkout</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. PRODUCT QUICK VIEW MODAL -->
+  <div class="modal-backdrop" id="quickViewModal">
+    <div class="product-quick-modal">
+      <button type="button" class="modal-close" onclick="window.auraAtelier.closeQuickView()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="quickViewContent" style="display: contents;">
+        <!-- Populated dynamically by art.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 9.5 BACK TO JK STUDY HUB HOME BANNER -->
+  <section class="art-back-home-banner">
+    <div class="container text-center">
+      <div class="back-home-card">
+        <div class="back-home-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="back-home-content">
+          <h3>Looking for Study Materials, Notes &amp; Books?</h3>
+          <p>Explore Class 10th &amp; 11th JKBOSE solved papers, instant guides, and student bookstore supplies.</p>
+        </div>
+        <div class="back-home-actions">
+          <a href="https://jkstudyhub.online" class="btn-return-home">
+            <i class="fa-solid fa-house"></i>
+            <span>Return to JK Study Hub Home</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. LUXURY FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-brand-title">AURA RESIN ATELIER</h3>
+        <p class="footer-brand-p">
+          Crafting eternal botanical art and crystal home heirlooms in Srinagar, Kashmir. Each piece is unique, slow-cured, and made with devotion.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atelier Collections</h4>
+        <ul>
+          <li><a href="#collections">Botanical Bookmarks</a></li>
+          <li><a href="#collections">Initial Monogram Keychains</a></li>
+          <li><a href="#collections">Ocean Wave Geode Clocks</a></li>
+          <li><a href="#collections">Ayat-ul-Kursi Mirrored Frames</a></li>
+          <li><a href="#collections">Wedding Floral Keepsakes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Client Care</h4>
+        <ul>
+          <li><a href="#bespoke">Bespoke Commissions</a></li>
+          <li><a href="#our-craft">Resin Care Guide</a></li>
+          <li><a href="https://wa.me/919622605714" target="_blank" rel="noopener">WhatsApp Concierge</a></li>
+          <li><a href="https://jkstudyhub.online" style="color: var(--accent-gold-light); font-weight: 600;"><i class="fa-solid fa-graduation-cap"></i> Visit JK Study Hub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kashmir Workshop</h4>
+        <p style="font-size: 13.5px; line-height: 1.6; margin-bottom: 14px;">
+          Baramulla &amp; Srinagar, Jammu &amp; Kashmir<br>
+          Direct Inquiries: <a href="tel:+919622605714" style="color: #faf8f5;">+91 9622605714</a>
+        </p>
+        <div style="display: flex; gap: 12px; font-size: 18px;">
+          <a href="https://wa.me/919622605714" target="_blank" rel="noopener" style="color: #22c55e;"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" style="color: #e1306c;"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom-bar">
+      <p>&copy; 2026 Aura Resin Atelier. All Rights Reserved. Handcrafted in Kashmir.</p>
+      <p><i class="fa-solid fa-gem" style="color: var(--accent-gold);"></i> Hand-Poured • Non-Yellowing • Bubble-Free Crystal Resin</p>
+    </div>
+  </footer>
+
+  <!-- 11. MOBILE BOTTOM STICKY NAVIGATION (Native App Experience) -->
+  <nav class="art-mobile-bottom-bar" aria-label="Mobile Navigation">
+    <a href="https://jkstudyhub.online" class="art-bottom-tab" title="Back to JK Study Hub Home">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="#collections" class="art-bottom-tab active" title="Browse Resin Pieces">
+      <i class="fa-solid fa-gem"></i>
+      <span>Gallery</span>
+    </a>
+    <a href="#simulator" class="art-bottom-tab" title="3D Customizer">
+      <i class="fa-solid fa-cube"></i>
+      <span>3D Studio</span>
+    </a>
+    <button type="button" class="art-bottom-tab" onclick="window.auraAtelier ? window.auraAtelier.toggleCartDrawer(true) : null" title="View Cart">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Bag</span>
+      <span id="artMobileBottomCartBadge" class="art-bottom-badge" style="display:none;">0</span>
+    </button>
+    <a href="https://wa.me/919622605714?text=Hello%20Aura%20Resin%20Atelier!%20I%20am%20interested%20in%20handcrafted%20resin%20art." target="_blank" rel="noopener" class="art-bottom-tab art-bottom-whatsapp" title="WhatsApp Order">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>Order</span>
+    </a>
+  </nav>
+
+  <!-- Controller Script -->
+  <script src="art.js?v=8.0"></script>
+</body>
+</html>
